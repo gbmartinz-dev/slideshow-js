@@ -10,3 +10,18 @@ const images = [
 ]
 
 const containerItems = document.querySelector('#container-items');
+
+const loadImages = (images, container) => {
+    images.forEach (images => {
+        container.innerHTML += `<div><img src='${image.url}'></div>`
+    })
+}
+
+loadImages(images, containerItems);
+
+let items = document.querySelectorAll('.item');
+
+const previous = () => {
+    containerItems.appendChild(items[0]);
+    items = document.querySelectorAll('.item');
+}
